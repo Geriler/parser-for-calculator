@@ -33,14 +33,9 @@ function division($exp){
 			// var_dump($div);
 			// echo "<hr>";
 
-			$result = 0;
+			$result = $div[0];
 			for ($d=0; $d < $c_div; $d++) { 
-				if (!$div[$d+1] === false) {
-					$result = $div[$d] / $div[$d+1];
-					$d += 1;
-				}else{
-					$result /=$div[$d];
-				}
+				$result /=$div[$d];
 			}
 			$exp = str_replace($data, $result, $exp);
 			return $exp;
